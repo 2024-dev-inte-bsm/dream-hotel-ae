@@ -15,7 +15,6 @@ async function fetchApiChambre() {
     }
 
     const dataTableChambre = await response.json();
-    console.log(dataTableChambre);
     return dataTableChambre;
 
   }
@@ -41,7 +40,6 @@ async function fetchApiRestau() {
     }
 
     const dataTableRestau = await response.json();
-    console.log(dataTableRestau);
     return dataTableRestau;
 
   }
@@ -67,7 +65,6 @@ async function fetchApiService() {
     }
 
     const dataTableService = await response.json();
-    console.log(dataTableService);
     return dataTableService;
 
   }
@@ -121,7 +118,7 @@ function afficherDataChambre(dataa) {
   dataa.data.forEach(user => {
 
     afficherChambre.innerHTML +=
-      `<div class="w-full bg-[${user.color}]">
+      `<div class="w-[95%] my-6 bg-[${user.color}] shadow-2xl rounded-xl">
         <div class="container p-6 mx-auto">
           <div class="overflow-hidden bg-[#E6E6FA] rounded-lg shadow-lg">
             <div class="lg:flex">
@@ -220,14 +217,14 @@ setTimeout(() => {
   sideBar.classList.remove('left-0');
   sideBar.classList.remove('hidden');
 
-}, 40);
+}, 100);
 
 
 setInterval(() => {
 
   sideBar.classList.remove('-translate-x-full');
 
-}, 1);
+}, 2);
 
 //================================================================================================================================================================================================
 // Info: Fonction pour les confettis coeur
